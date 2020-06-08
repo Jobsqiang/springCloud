@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qiangjiang.provider.mapper.UserMapper">
+    <insert id="insert" parameterType="com.qiangjiang.provider.model.User">
+        insert into tbl_user (id,username,password,token,myOrderNo,payWayType,extra,settleUnitID,code,message,messageParams,traceID)
+        value (#{id},#{userName},#{passWord},#{token},#{myOrderNo},#{payWayType},#{extra},#{settleUnitID},#{code},#{message},#{messageParams},#{traceID})
+    </insert>
+</mapper>

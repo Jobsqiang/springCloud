@@ -1,0 +1,9 @@
+server:
+  port: 9001
+
+
+
+iron:
+  props:
+    url:
+      test: http://localhost:8001/provider/get

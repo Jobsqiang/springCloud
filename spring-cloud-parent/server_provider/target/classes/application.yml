@@ -1,0 +1,57 @@
+
+
+server:
+  port: 8001
+
+
+spring:
+  application:
+    name: Test-provider   #服务名称，随意取
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_ironOldMan?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: jiangqiang
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    tomcat:
+      max-active: 100
+      min-idle: 5
+      validation-query: SELECT 1
+      test-on-borrow: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 3600000
+      min-evictable-idle-time-millis: 1800000
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka #注册到Eureka的地址
+
+
+
+mail:
+  smtp:
+    auth: true
+    port: 465
+    timeout: 30000
+  send:
+    charset: UTF-8
+  is:
+    ssl: true
+  host: smtp.163.com
+  auth:
+    name: jiangdada316@163.com
+    password: jq19920316
+
+
+iron:
+  notify:
+    rabbitmq:
+      userQuene: dev_user_queue
+      userExchange: dev_user_exchange

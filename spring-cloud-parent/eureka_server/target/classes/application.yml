@@ -1,0 +1,8 @@
+server:
+  port: 7001
+eureka:
+  instance:
+    hostname: http://localhost	#本机地址 比如 localhost 都可以
+  client:
+    fetch-registry: false
+    register-with-eureka: false

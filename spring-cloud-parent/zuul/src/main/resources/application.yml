@@ -1,0 +1,15 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: Zuul-Server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+zuul:
+  routes:
+    provider.serviceId: Test-provider
+    provider.path: /test/**  #匹配指定的路径，资源匹配的路径才会拦截，转发
+  ignored-services: "*"      #忽略直接使用服务名   *忽略所有的服务
+  prefix: /server            #统一给访问前缀
